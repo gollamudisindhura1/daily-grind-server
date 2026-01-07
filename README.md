@@ -27,12 +27,12 @@ This repository contains a simple Express.js web server for "The Daily Grind" co
 
 
 3. How would you add a third page (e.g., a menu page) to this server? What steps would you take?
-1. Create a new HTML file- public/menu.html
-2. Add a new route in server.js
-    - app.get("/menu", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "menu.html"));
-    });
-3. Add navigation links in the HTML files pointing to /menu.
+    1. Create a new HTML file- public/menu.html
+    2. Add a new route in server.js
+        - app.get("/menu", (req, res) => {
+        res.sendFile(path.join(__dirname, "public", "menu.html"));
+        });
+    3. Add navigation links in the HTML files pointing to /menu.
 
 
 
