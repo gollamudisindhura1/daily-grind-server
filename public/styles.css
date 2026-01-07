@@ -1,43 +1,142 @@
+/* General body styling */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #f6d365, #fda085);
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom right, #f6d365, #fda085);
   color: #3e2723;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
 }
 
-header {
+
+header, 
+body > h1:first-of-type {
   background-color: #4e342e;
   color: white;
-  padding: 20px;
-  text-align: center;
+  width: 100%;
+  padding: 30px 0;
+  margin: 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-.container {
-  padding: 40px;
-  text-align: center;
+header h1,
+body > h1:first-of-type {
+  margin: 0;
+  font-size: 2.5em;
+  font-family: 'Georgia', serif;
 }
 
-img {
-  width: 200px;
-  margin-top: 20px;
+header p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
 }
 
+
+.page-content {
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Home page */
+.home-content {
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+/* Buttons - minor padding increase for better look */
 button {
   background-color: #6d4c41;
   color: white;
   border: none;
-  padding: 12px 20px;
+  padding: 12px 28px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   background-color: #5d4037;
+  transform: scale(1.05);
 }
 
-a {
-  color: #4e342e;
-  text-decoration: none;
+a { text-decoration: none; }
+
+
+/* Works on all pages (Home, Menu, Contact) */
+.buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Menu grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+/* Menu items */
+.menu-item {
+  background-color: #fff3e0;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.menu-item img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 15px;
+  border-radius: 12px; 
+}
+
+.menu-item h2 {
+  margin: 10px 0 8px;
+  color: #6d4c41;
+  font-size: 1.5em;
+  font-family: 'Georgia', serif;
+}
+
+.menu-item p {
+  margin: 8px 0 15px;
   font-weight: bold;
+  color: #4e342e;
+  font-size: 1.2em;
+}
+
+/* Larger, nicer paragraph text */
+p {
+  font-size: 1.2em;
+  max-width: 600px;
+  line-height: 1.6;
 }
